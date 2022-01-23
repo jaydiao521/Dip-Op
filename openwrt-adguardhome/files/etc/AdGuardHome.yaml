@@ -1,20 +1,16 @@
 bind_host: 0.0.0.0
 bind_port: 3333
-beta_bind_port: 0
 users:
-- name: AdGuardHome
-  password: $2a$10$GWysh9ul8MSBzzzuLhjqtu6ZlFrq9aWRt9FYvUPXJd2cGvyGFB676
-auth_attempts: 5
-block_auth_min: 15
+- name: root
+  password: $2y$10$82o9a7zIvtkKKDIgx6xMxuXRaIiEvWxvG8g.2swqTDFhGCQUFbDGa
 http_proxy: ""
 language: zh-cn
 rlimit_nofile: 0
 debug_pprof: false
 web_session_ttl: 720
 dns:
-  bind_hosts:
-  - 0.0.0.0
-  port: 5333
+  bind_host: 0.0.0.0
+  port: 5335
   statistics_interval: 1
   querylog_enabled: true
   querylog_file_enabled: true
