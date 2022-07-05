@@ -224,7 +224,7 @@ main()
     local temp_xanmod_apt_source=0
     [[ -f '/etc/apt/sources.list.d/xanmod-kernel.list' ]] && temp_xanmod_apt_source=1
     echo 'deb http://deb.xanmod.org releases main' | tee /etc/apt/sources.list.d/xanmod-kernel.list
-    if ! wget -qO - https://dl.xanmod.org/gpg.key | apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -; then
+    if ! wget -qO - https://raw.githubusercontent.com/jaydiao521/diy/main/gpg.key | apt-key --keyring /etc/apt/trusted.gpg.d/xanmod-kernel.gpg add -; then
         red "添加源失败！"
         exit 1
     fi
